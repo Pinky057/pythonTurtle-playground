@@ -8,10 +8,10 @@ bob.pencolor('#1FC4DA')      # Change pen colour to red
 
 # Changing the speed of the turtle, 0 means the maximum speed
 bob.speed(0)
-bob.penup()                    # Stop drawing while moving
+bob.penup()                    # Stop drawing when moving
 
-bob.goto((-50, 200))
-bob.pendown()                  # Start drawing again while moving
+bob.goto((-50, 200))           # Move turtle to an absolute position.
+bob.pendown()                  # Start drawing again when moving
 bob.shape("turtle")            # Set the pen shape of the turtle
 
 forwardistance = 0             # variable
