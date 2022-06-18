@@ -1,16 +1,33 @@
 from turtle import *
 
 speed(0)
-bgcolor("skyblue")
+bgcolor("#364C96")
+
+
+# moon drawing
+up()
+goto(-20, -100)
+color('orange')
+begin_fill()
+circle(200)
+end_fill()
+
+up()
+goto(30, -100)
+color('#364C96')
+begin_fill()
+circle(200)
+end_fill()
+
 
 # Grass
 penup()
-goto(-400, -100)
+goto(-450, -150)
 pendown()
-color("limegreen")
+color("#5D781B")
 begin_fill()
-for i in range(2):
-    forward(800)
+for i in range(6):
+    forward(900)
     right(90)
     forward(400)
     right(90)
@@ -18,9 +35,9 @@ end_fill()
 
 # Left Mountain
 penup()
-goto(-400, -100)
+goto(-400, -150)
 pendown()
-color("dimgray")
+color("#FF9677")
 begin_fill()
 for i in range(3):
     forward(300)
@@ -29,7 +46,7 @@ end_fill()
 
 # Right Mountain
 penup()
-goto(100, -100)
+goto(100, -150)
 pendown()
 begin_fill()
 for i in range(3):
@@ -39,9 +56,9 @@ end_fill()
 
 # Middle Mountain
 penup()
-goto(-160, -100)
+goto(-160, -150)
 pendown()
-color("gray")
+color("#974063")
 begin_fill()
 for i in range(3):
     forward(400)
@@ -50,7 +67,7 @@ end_fill()
 
 # Middle Mountain Ice Cap
 penup()
-goto(-35, 120)
+goto(-35, 70)
 pendown()
 color("white")
 begin_fill()
@@ -68,7 +85,7 @@ end_fill()
 
 # Left Mountain Ice Cap
 penup()
-goto(-215, 100)
+goto(-215, 55)
 pendown()
 color("snow")
 begin_fill()
@@ -84,7 +101,7 @@ end_fill()
 
 # Right Mountain Ice Cap
 penup()
-goto(203, 80)
+goto(203, 40)
 pendown()
 begin_fill()
 forward(95)
@@ -97,17 +114,8 @@ end_fill()
 
 left(50)
 
-# Sun
-penup()
-goto(-500, 350)
-pendown()
-color("yellow")
-begin_fill()
-circle(125)
-end_fill()
 
 # Tree
-
 
 def tree():
     # Tree trunk
@@ -126,7 +134,7 @@ def tree():
     forward(5)
 
     # Leaves on tree
-    color("forestgreen")
+    color("#295D09")
     begin_fill()
     circle(25)
     end_fill()
@@ -160,9 +168,8 @@ tree()
 
 # Plant the fifth tree
 penup()
-goto(-200, -100)
+goto(-200, -150)
 pendown()
 tree()
-
 hideturtle()
 done()
