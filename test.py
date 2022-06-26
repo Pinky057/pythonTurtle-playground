@@ -1,26 +1,54 @@
-import turtle                # Import the Turtle library
+import turtle
+from random import randint
 
-bob = turtle.Turtle()        # Create an object
-turtle.bgcolor('#0E1630')    # Change the background colour
-bob.pensize(1)               # setting the pen thikness
-bob.pencolor('#1FC4DA')      # Change pen colour to red
+turtle.Screen()
+turtle.bgcolor("#0E1630")
+turtle.speed(0)
+turtle.hideturtle()
+
+# moon
+moon = turtle.Turtle()
+moon.color("orange")
+moon.shape("turtle")
+moon.speed(0)
+moon.hideturtle()
+moon.up()
+moon.goto(0, -200)
+moon.color('orange')
+moon.begin_fill()
+moon.circle(200)
+moon.end_fill()
+
+turtle.up()
+turtle.goto(50, -200)
+turtle.color('#0E1630')
+turtle.begin_fill()
+turtle.circle(200)
+turtle.end_fill()
+
+# stars
+stars = turtle.Turtle()
+stars.color("orange")
+stars.shape("turtle")
+stars.speed(0)
 
 
-# Changing the speed of the turtle, 0 means the maximum speed
-bob.speed(0)
-bob.penup()                    # Stop drawing while moving
-
-bob.goto((-50, 200))
-bob.pendown()                  # Start drawing again while moving
-bob.shape("turtle")            # Set the pen shape of the turtle
-
-forwardistance = 0             # variable
-Right = 0                      # variable
-for i in range(220):
-    bob.forward(forwardistance)
-    bob.right(Right)
-    forwardistance += 3
-    Right += 1
+def star():
+    turns = 8
+    while turns > 0:
+        stars.forward(25)
+        stars.left(205)
+        turns = turns-1
 
 
-turtle.done()                 # not to close the window at the end
+nums_stars = 0
+while nums_stars < 90:
+    x = randint(-400, 400)
+    y = randint(-400, 400)
+    star()
+    stars.penup()
+    stars.goto(x, y)
+    stars.pendown()
+    nums_stars = nums_stars + 1
+
+turtle.done()
