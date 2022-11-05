@@ -1,18 +1,18 @@
-import turtle                       # Import the Turtle library
+import turtle                            # Import the Turtle library
 
-snowTurtle = turtle.Turtle()         # Create an object
-turtle.bgcolor('#364C96')           # Change background colour
-snowTurtle.pensize(4)
+
+snowTurtle = turtle.Turtle()             # create an object
+turtle.bgcolor('#364c96')                # change the background color
+snowTurtle.pensize(4)                    # setting the pensize property
 colors = ["#EAEBED", "#99D2FF", "#94AC64"]
 
 
-snowTurtle.penup()                # Stop drawing when moving
-snowTurtle.goto((-200, 0))        # Move turtle to an absolute position.
+snowTurtle.penup()           # stop drawing when moving
+snowTurtle.goto((-200, 0))  # move turtle to an absolute position
 
-snowTurtle.pendown()              # Start drawing when moving
-snowTurtle.shape("turtle")
-# Changing the speed of the turtle, 0 means the maximum speed
-snowTurtle.speed(0)
+snowTurtle.pendown()           # start drawing when moving
+snowTurtle.shape("turtle")     # shpe the pen to turtle shape
+snowTurtle.speed(0)            # sets the speed, 0 is the maximum speed
 
 
 def snow(length, n):
@@ -20,8 +20,8 @@ def snow(length, n):
         snowTurtle.forward(length)
 
     else:
-        length /= 3
-        n -= 1
+        length /= 3                   # abriviation of this is x= x/ y
+        n -= 1                        # abriviation of this is x =x-y
         snow(length, n)
         snowTurtle.right(65)
         snow(length, n)
@@ -32,11 +32,8 @@ def snow(length, n):
 
 
 for side in range(3):
-
-    # Choose a colour of the side from the array
     snowTurtle.color(colors[side])
     snow(500, 4)
     snowTurtle.left(120)
 
-
-turtle.done()  # To not close the window at the end
+turtle.done()   # to not colse the window at the end
